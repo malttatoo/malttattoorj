@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Trabalho | MaltTattoo</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #000;
+      color: #e29250;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #111;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      width: 40px;
+      margin-right: 10px;
+    }
+
+    .menu-toggle {
+      font-size: 28px;
+      color: #e29250;
+      background: none;
+      border: none;
+      cursor: pointer;
+      display: none;
+      z-index: 1001;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #e29250;
+      font-size: 16px;
+      transition: font-size 0.3s ease;
+    }
+
+    nav a:hover {
+      font-size: 18px;
+    }
+
+    main {
+      padding: 30px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 28px;
+      margin: 20px 0;
+      color: #e29250;
+    }
+
+    .info-text {
+      color: #ccc;
+      line-height: 1.8;
+      text-align: justify;
+      margin: 20px 0 30px;
+    }
+
+    .galeria {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .galeria img {
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 2px solid #e29250;
+    }
+
+    footer {
+      background-color: #111;
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+
+    /* Menu mobile */
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      nav {
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 50%;
+        background-color: #111;
+        padding: 80px 20px;
+        gap: 20px;
+        border-left: 2px solid #e29250;
+        transition: right 0.3s ease;
+      }
+
+      nav.active {
+        right: 0;
+      }
+
+      nav a {
+        font-size: 18px;
+        padding: 10px 0;
+        border-bottom: 1px solid #e29250;
+      }
+
+      .galeria img {
+        width: 90%;
+        height: auto;
+      }
+
+      /* Overlay para clicar fora do menu */
+      .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 999;
+      }
+
+      .overlay.active {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="logo.png.png" alt="Logo MaltTattoo">
+      <h1>MaltTattoo</h1>
+    </div>
+    <button class="menu-toggle">&#9776;</button>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="contato.html">Contato</a>
+      <a href="local.html">Localização</a>
+    </nav>
+  </header>
+
+  <!-- Overlay para clicar fora do menu -->
+  <div class="overlay"></div>
+
+  <main>
+    <h2 class="section-title">Nosso Trabalho</h2>
+
+    <div class="galeria">
+      <img src="tattoo1.jpg" alt="Tatuagem 1">
+      <img src="tattoo2.jpg" alt="Tatuagem 2">
+      <img src="tattoo3.jpg" alt="Tatuagem 3">
+      <img src="tattoo4.jpg" alt="Tatuagem 4">
+      <img src="tattoo5.jpg" alt="Tatuagem 5">
+      <img src="tattoo6.jpg" alt="Tatuagem 6">
+      <img src="tattoo7.jpg" alt="Tatuagem 7">
+      <img src="tattoo8.jpg" alt="Tatuagem 8">
+      <img src="tattoo9.jpg" alt="Tatuagem 9">
+      <img src="tattoo10.jpg" alt="Tatuagem 10">
+      <img src="tattoo11.jpg" alt="Tatuagem 11">
+      <img src="tattoo12.jpg" alt="Tatuagem 12">
+      <img src="tattoo13.jpg" alt="Tatuagem 13">
+      <img src="tattoo14.jpg" alt="Tatuagem 14">
+      <img src="tattoo15.jpg" alt="Tatuagem 15">
+      <img src="tattoo16.jpg" alt="Tatuagem 16">
+      <img src="tattoo17.jpg" alt="Tatuagem 17">
+      <img src="tattoo18.jpg" alt="Tatuagem 18">
+      <img src="tattoo19.jpg" alt="Tatuagem 19">
+      <img src="tattoo20.jpg" alt="Tatuagem 20">
+      <img src="tattoo21.jpg" alt="Tatuagem 21">
+      <img src="tattoo22.jpg" alt="Tatuagem 22">
+      <img src="tattoo23.jpg" alt="Tatuagem 23">
+      <img src="tattoo24.jpg" alt="Tatuagem 24">
+    </div>
+
+    <h2 class="section-title">Instruções pós Tatuagem</h2>
+    <p class="info-text">
+      Após realizar sua tatuagem, é essencial seguir os cuidados recomendados para garantir a boa cicatrização e preservar a qualidade da arte.
+      <br><br>
+      <strong>Cuidados após a tatuagem:</strong><br>
+      - Lave a região com sabonete neutro duas vezes ao dia, com as mãos limpas.<br>
+      - Aplique pomada cicatrizante recomendada pelo tatuador.<br>
+      - Mantenha a tatuagem hidratada, mas sem excesso.<br>
+      - Evite coçar ou arrancar casquinhas.<br>
+      - Use roupas leves que não esfreguem a pele tatuada.<br><br>
+
+      <strong>Evite durante a cicatrização:</strong><br>
+      - Alimentos como carne de porco, chocolate, frutos do mar e alimentos gordurosos.<br>
+      - Exposição ao sol, piscina, mar e sauna por no mínimo 15 dias.<br>
+      - Usar protetor solar na região tatuada apenas após a cicatrização completa.<br><br>
+
+      <strong>Tempo de cicatrização:</strong> Em média, a pele cicatriza superficialmente em 7 a 15 dias. A cicatrização completa pode levar de 30 a 45 dias, dependendo da sua pele e cuidados.
+    </p>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="ano"></span> MaltTattoo. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    // Atualiza o ano automaticamente
+    document.getElementById("ano").textContent = new Date().getFullYear();
+
+    // Menu e overlay
+    const toggle = document.querySelector(".menu-toggle");
+    const nav = document.querySelector("nav");
+    const overlay = document.querySelector(".overlay");
+    const navLinks = document.querySelectorAll("nav a");
+
+    toggle.addEventListener("click", () => {
+      nav.classList.toggle("active");
+      overlay.classList.toggle("active");
+    });
+
+    overlay.addEventListener("click", () => {
+      nav.classList.remove("active");
+      overlay.classList.remove("active");
+    });
+
+    navLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        nav.classList.remove("active");
+        overlay.classList.remove("active");
+      });
+    });
+  </script>
+</body>
+</html>
